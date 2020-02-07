@@ -1,7 +1,8 @@
 #include<iostream>
 using namespace std;
 void Permut(int,int,char* arr);
-void swap(int ,int);
+void swapw(char& ,char&);
+int x=1;
 int main()
 {
     int nchar;
@@ -13,6 +14,7 @@ int main()
     for(int i=0;i<nchar;i++)
     {
         arr[i]=a;
+        arr[nchar]='\0';
         a++;
     }
     
@@ -29,9 +31,12 @@ void swapw(char &a,char &b)
 }
 void Permut(int num,int fir,char array[])
 {
+		
     if(fir==num)
     {
-        cout<<array<<endl;
+    	
+        cout<<x++<<": "<<array<<endl;
+        
     }
     else{
    for(int i=fir;i<num;i++)
@@ -41,7 +46,7 @@ void Permut(int num,int fir,char array[])
         swapw(array[fir],array[i]);
         Permut(num,fir+1,array);
         swapw(array[fir],array[i]);
-    
+   
    }
 }
 }
