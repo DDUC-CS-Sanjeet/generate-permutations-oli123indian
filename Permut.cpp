@@ -21,9 +21,9 @@ int main()
     Permut(nchar,0,arr);
     return 0;
 }
-void swapw(int &a,int &b)
+void swapw(char &a,char &b)
 {
-    int temp=a;
+    char temp=a;
     a=b;
     b=temp;
 }
